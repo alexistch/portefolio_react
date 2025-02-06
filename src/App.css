@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+* {
+  cursor: url('assets/IMG/2.png'), auto;
+}
+
+a, button, input[type="submit"], input[type="button"], .clickable {
+  cursor: url('assets/IMG/2.png'), auto !important;
+}
+
+a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover, .clickable:hover {
+  cursor: url('assets/IMG/2.png'), auto !important;
+}
+
+.navbar {
+  cursor: url('assets/IMG/2.png'), auto;
+}
+
+.navbar, .navbar * {
+  cursor: url('assets/IMG/2.png'), auto !important;
+}
 
 body {
     font-family: 'Poppins', sans-serif;

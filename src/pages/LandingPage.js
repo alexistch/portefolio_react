@@ -1,9 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import ImageAlexis from '../assets/IMG/3.png';
-import Cv from '../assets/IMG/CV.pdf';
+import Cv from '../assets/IMG/Cv.pdf';
 import ImageCvflash from '../assets/IMG/cvflash.png';
 import ImageTS from '../assets/IMG/tchoupa.png';
 import Typewriter from 'react-typewriter-effect';
