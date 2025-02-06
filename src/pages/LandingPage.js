@@ -113,7 +113,7 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    {/* Formes décoratives */}
+                    {/* Forme décorative */}
                     <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-5"></div>
                     <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-5"></div>
                     
