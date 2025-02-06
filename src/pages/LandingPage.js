@@ -4,14 +4,16 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import ImageAlexis from '../assets/IMG/3.png';
 import Cv from '../assets/IMG/CV.pdf';
+import ImageCvflash from '../assets/IMG/cvflash.png';
+import ImageTS from '../assets/IMG/tchoupa.png';
 import Typewriter from 'react-typewriter-effect';
 import { useState } from 'react';
 
 
 const LandingPage = () => {
     const projects = [
-        { id: 1, title: 'Projet 1', image: 'https://picsum.photos/300/200?random=1' },
-        { id: 2, title: 'Projet 2', image: 'https://picsum.photos/300/200?random=2' },
+        { id: 1, title: 'Cvflash.fr', image: ImageCvflash, link: "https://cvflash.fr"},
+        { id: 2, title: 'Tchoupa.shop', image: ImageTS, link: "https://www.vinted.fr/member/34521937" },
         { id: 3, title: 'Projet 3', image: 'https://picsum.photos/300/200?random=3' },
         { id: 4, title: 'Projet 4', image: 'https://picsum.photos/300/200?random=4' },
       ];
@@ -263,77 +265,77 @@ const LandingPage = () => {
 
             
             <section id="projets" className="bg-gray-900 py-32 min-h-screen relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-t from-transparent to-gray-900"></div>
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-t from-transparent to-gray-900"></div>
 
-                {/* Décorations */}
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-                </div>
+      {/* Décorations */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+      </div>
 
-                <div className="absolute inset-0 opacity-30">
-                    {[...Array(50)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="absolute bg-white rounded-full"
-                        style={{
-                        top: `${Math.random() * 100}%`,
-                        left: `${Math.random() * 100}%`,
-                        width: `${Math.random() * 4 + 1}px`,
-                        height: `${Math.random() * 4 + 1}px`,
-                        animationDuration: `${Math.random() * 10 + 5}s`,
-                        animationDelay: `${Math.random() * 5}s`,
-                        }}
-                    ></div>
-                    ))}
-                </div>
+      <div className="absolute inset-0 opacity-30">
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-white rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${Math.random() * 4 + 1}px`,
+              height: `${Math.random() * 4 + 1}px`,
+              animationDuration: `${Math.random() * 10 + 5}s`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          ></div>
+        ))}
+      </div>
 
-                <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="text-5xl font-bold text-white text-center mb-16 animate-fade-in-down">Mes Projets</h2>
-                    <div className="relative overflow-hidden">
-                    <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}>
-                        {projects.map((project) => (
-                        <div key={project.id} className="w-1/3 flex-shrink-0 px-2 group">
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="block">
-                            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg relative transform transition-all duration-300 group-hover:scale-105">
-                                <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-all duration-300 group-hover:blur-sm" />
-                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p className="text-white text-center p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div className="p-4">
-                                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        ))}
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-5xl font-bold text-white text-center mb-16 animate-fade-in-down">Mes Projets</h2>
+        <div className="relative overflow-hidden">
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}>
+            {projects.map((project) => (
+              <div key={project.id} className="w-1/3 flex-shrink-0 px-2 group">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                  <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg relative transform transition-all duration-300 group-hover:scale-105">
+                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-all duration-300 group-hover:blur-sm" />
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-center p-4">{project.description}</p>
                     </div>
-                    <button 
-                          onClick={prevSlide} 
-                          className="absolute top-1/2 left-4 transform -translate-y-1/2 
-                                     bg-white bg-opacity-20 hover:bg-opacity-40 
-                                     rounded-full p-4 focus:outline-none 
-                                     transition-all duration-300 ease-in-out animate-pulse"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button 
-                        onClick={nextSlide} 
-                        className="absolute top-1/2 right-4 transform -translate-y-1/2 
-                                   bg-white bg-opacity-20 hover:bg-opacity-40 
-                                   rounded-full p-4 focus:outline-none 
-                                   transition-all duration-300 ease-in-out animate-pulse"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                    <div className="p-4">
+                      <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                     </div>
-                </div>
-            </section>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+          <button 
+            onClick={prevSlide} 
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 
+                       bg-white bg-opacity-20 hover:bg-opacity-40 
+                       rounded-full p-2 focus:outline-none 
+                       transition-all duration-300 ease-in-out animate-pulse"
+          >
+            <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
+            onClick={nextSlide} 
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 
+                       bg-white bg-opacity-20 hover:bg-opacity-40 
+                       rounded-full p-2 focus:outline-none 
+                       transition-all duration-300 ease-in-out animate-pulse"
+          >
+            <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
             
             <section id="contact" className="bg-gray-900 py-24 relative">
                 <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-gray-900 to-gray-900"></div>
