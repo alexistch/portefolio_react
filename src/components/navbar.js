@@ -1,5 +1,5 @@
 import React from 'react';
-import Cv from '../assets/IMG/Cv.pdf';
+import Cv from '../assets/IMG/CV.pdf';
 
 const Navbar = ({ scrollToSection }) => {
     
