@@ -104,7 +104,7 @@ const LandingPage = () => {
 
 
             <section id="competences" className="py-24 bg-gray-800 relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Décoration de fond complexe */}
+                {/* Décoration de fond complexe*/}
                     <div className="absolute inset-0 opacity-10">
                         {/* Grille de points */}
                         <div className="absolute inset-0 grid grid-cols-20 grid-rows-20 gap-2">
