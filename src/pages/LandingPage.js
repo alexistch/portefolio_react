@@ -11,10 +11,10 @@ import { useState } from 'react';
 
 const LandingPage = () => {
     const projects = [
-        { id: 1, title: 'Cvflash.fr', image: ImageCvflash, link: "https://cvflash.fr"},
-        { id: 2, title: 'Tchoupa.shop', image: ImageTS, link: "https://www.vinted.fr/member/34521937" },
-        { id: 3, title: 'Projet 3', image: 'https://picsum.photos/300/200?random=3' },
-        { id: 4, title: 'Projet 4', image: 'https://picsum.photos/300/200?random=4' },
+        { id: 1, title: 'Cvflash.fr', image: ImageCvflash, link: "https://cvflash.fr",description: "Réalisation d'un générateur de Cv simple et gratuit pour tous"},
+        { id: 2, title: 'Tchoupa.shop', image: ImageTS, link: "https://www.vinted.fr/member/34521937",description: "Boutique de revente de vetements et sneakers" },
+        { id: 3, title: 'Projet 3', image: 'https://picsum.photos/300/200?random=3',description: "à venir ..." },
+        { id: 4, title: 'Projet 4', image: 'https://picsum.photos/300/200?random=4',description: "à venir ..." },
       ];
     
       const [currentIndex, setCurrentIndex] = useState(0);
