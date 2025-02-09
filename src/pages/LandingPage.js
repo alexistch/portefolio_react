@@ -36,61 +36,69 @@ const LandingPage = () => {
 
     return (
         <div className="h-screen overflow-y-auto bg-gray-900 relative">
-            <Navbar scrollToSection={scrollToSection}/>
+            <Navbar scrollToSection={scrollToSection} />
             <section id="accueil" className="text-gray-600 body-font">
-                <div className="container mx-auto flex items-center justify-center h-[calc(100vh-100px)] gap-40">
-                    <div className="flex-grow max-w-lg flex flex-col items-start text-left space-y-4">
-                    <div className="space-y-3">
-                        <h1 className="title-font text-4xl font-extrabold text-white">
-                            Bonjour,
-                        </h1>
-                        <h2 className="text-3xl font-extrabold text-white flex items-baseline">
-                            Je suis un&nbsp;
-                            <span className="text-violet-600">
-                                <Typewriter
-                                    textStyle={{
-                                        display: 'inline',
-                                        fontSize: 'inherit', 
-                                        fontWeight: 'inherit', 
-                                        color: '#8b5cf6', 
-                                    }}
-                                    startDelay={100}
-                                    cursorColor="#8b5cf6"
-                                    multiText={[
-                                        'Développeur Web',
-                                        'Technicien réseau',
-                                        'Ethical Hacker',
-                                    ]}
-                                    multiTextDelay={1500} 
-                                    typeSpeed={70} 
-                                    deleteSpeed={50} 
-                                    loop
-                                />
-                            </span>
-                        </h2>
-                    </div>
-                        <p className="leading-relaxed text-gray-300 ">
-                        Je suis étudiant en troisième année à l'EFREI, où je poursuis un bachelor en cybersécurité et ethical hacking. Passionné par le développement web et le sport, je consacre mon temps libre à approfondir ces centres d'intérêt. 
-                        </p>
-                        <div className="flex space-x-4 ">
-                            <button onClick={() => window.open(Cv, '_blank')} className="rounded-full shadow-glowbutton inline-flex text-white font-semibold bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                Mon CV
-                            </button>
-                            <button onClick={() => scrollToSection('projets')} className="rounded-full inline-flex text-gray-700 font-semibold bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                                Découvrez mes projets
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="max-w-lg w-1/2 flex justify-center">
-                        <img
-                            className="object-cover object-center rounded-full w-80 h-80 shadow-glow hover:shadow-glow-hover transition duration-300"
-                            alt="Hero Section"
-                            src={ImageAlexis}
+                <div className="container mx-auto flex flex-col items-center justify-center h-[calc(100vh-100px)] gap-6 px-4 md:flex-row md:gap-40">
+                {/* Texte et boutons */}
+                <div className="flex-grow max-w-lg flex flex-col items-center text-center space-y-4 md:items-start md:text-left">
+                    <div className="space-y-3 hidden md:block">
+                    <h1 className="title-font text-4xl font-extrabold text-white">Bonjour,</h1>
+                    <h2 className="text-3xl font-extrabold text-white flex items-baseline">
+                        Je suis un&nbsp;
+                        <span className="text-violet-600">
+                        <Typewriter
+                            textStyle={{
+                            display: 'inline',
+                            fontSize: 'inherit',
+                            fontWeight: 'inherit',
+                            color: '#8b5cf6',
+                            }}
+                            startDelay={100}
+                            cursorColor="#8b5cf6"
+                            multiText={[
+                            'Développeur Web',
+                            'Technicien réseau',
+                            'Ethical Hacker',
+                            ]}
+                            multiTextDelay={1500}
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            loop
                         />
+                        </span>
+                    </h2>
+                    </div>
+                    <p className="leading-relaxed text-gray-300">
+                    Je suis étudiant en troisième année à l'EFREI, où je poursuis un bachelor en cybersécurité et ethical hacking. Passionné par le développement web et le sport, je consacre mon temps libre à approfondir ces centres d'intérêt.
+                    </p>
+                    <div className="flex flex-col space-y-4 md:flex-row items-center text-center md:space-x-4 md:space-y-0">
+                    <button
+                        onClick={() => window.open(Cv, '_blank')}
+                        className="rounded-full shadow-glowbutton inline-flex text-white font-semibold bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 text-lg"
+                    >
+                        Mon CV
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('projets')}
+                        className="rounded-full inline-flex text-gray-700 font-semibold bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 text-lg"
+                    >
+                        Découvrez mes projets
+                    </button>
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-gray-900 to-gray-800"></div>
+
+                        {/* Image */}
+                        <div className="max-w-lg w-full flex justify-center relative top-[-50px] md:top-0 md:w-1/2">
+                            <img
+                            className="object-cover object-center rounded-full w-40 h-40 md:w-80 md:h-80 shadow-glow hover:shadow-glow-hover transition duration-300"
+                            alt="Hero Section"
+                            src={ImageAlexis}
+                            />
+                        </div>
+
+
+                </div>
+                <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-gray-900 to-gray-800 md:block hidden"></div>
             </section>
 
 
@@ -260,7 +268,7 @@ const LandingPage = () => {
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-900"></div>
             </section>
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-800"></div>
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-800 md:block hidden"></div>
 
             
             <section id="projets" className="bg-gray-900 py-32 min-h-screen relative overflow-hidden">
