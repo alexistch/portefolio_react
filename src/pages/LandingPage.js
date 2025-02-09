@@ -88,7 +88,7 @@ const LandingPage = () => {
                 </div>
 
                         {/* Image */}
-                        <div className="max-w-lg w-full flex justify-center relative top-[-70px] md:top-0 md:w-1/2">
+                        <div className="max-w-lg w-full flex justify-center relative top-[-90px] md:top-0 md:w-1/2">
                             <img
                             className="object-cover object-center rounded-full w-40 h-40 md:w-80 md:h-80 shadow-glow hover:shadow-glow-hover transition duration-300"
                             alt="Hero Section"
